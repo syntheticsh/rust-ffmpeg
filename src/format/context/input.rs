@@ -33,8 +33,8 @@ impl Input {
 }
 
 impl Input {
-    pub fn format(&self) -> format::Input {
-        unsafe { format::Input::wrap((*self.as_ptr()).iformat) }
+    pub fn format(&mut self) -> format::Input {
+        unsafe { format::Input::wrap((*self.as_mut_ptr()).iformat as *mut _) }
     }
 
     pub fn video_codec(&self) -> Option<Codec> {

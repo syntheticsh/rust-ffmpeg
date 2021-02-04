@@ -18,7 +18,7 @@ bitflags! {
         const PARAM_CHANGE        = AV_CODEC_CAP_PARAM_CHANGE;
         const AUTO_THREADS        = AV_CODEC_CAP_AUTO_THREADS;
         const VARIABLE_FRAME_SIZE = AV_CODEC_CAP_VARIABLE_FRAME_SIZE;
-        const INTRA_ONLY          = AV_CODEC_CAP_INTRA_ONLY;
-        const LOSSLESS            = AV_CODEC_CAP_LOSSLESS;
+        const INTRA_ONLY          = AV_CODEC_PROP_INTRA_ONLY as u32;
+        const LOSSLESS            = AV_CODEC_PROP_LOSSLESS as u32;
     }
 }
